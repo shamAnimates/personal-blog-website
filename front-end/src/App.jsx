@@ -4,17 +4,20 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './index.css'
 
+import NavigationMenu from './components/navigation'
+import Header from './components/header'
+import RecentArticle from './components/recentArticle'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div class="text-center text-blue-500">
-  <h1 class="text-3xl font-bold">
-    Hello, Tailwind!
-  </h1>
-</div>
-
+    <div>
+    <Header />
+    <NavigationMenu />
+    <RecentArticle />
+    </div>
   )
 }
 
-export default App ;
+export default App;
