@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NavigationMenu() {
+function NavigationMenu(props) {
     return (
         <div class="flex flex-row nav-menu p-3">
             <div class="flex basis-3/4">
@@ -10,10 +10,10 @@ function NavigationMenu() {
                 </form>
             </div>
             <div className='flex basis-1/4 space-x-10'>
-                <div class=" hover:scale-105 nav-button"><a href='/'>home</a></div>
-                <div class=" hover:scale-105 nav-button"><a href='/contact'>contact</a></div>
-                <div class=" hover:scale-105 nav-button"><a href='/portfolio'>Portfolio</a></div>
-                <div class=" hover:scale-105 nav-button"><button>☀️</button></div>
+                <div class=" hover:scale-105 nav-button" onClick={props.openHome}>home</div>
+                <div class=" hover:scale-105 nav-button" onClick={props.openContacts}>contact</div>
+                <div class=" hover:scale-105 nav-button" onClick={props.openPortfolio}>Portfolio</div>
+                <div class=" hover:scale-105 nav-button"><button onClick={props.switchTheme}>☀️</button></div>
             </div>
         </div>
     )
